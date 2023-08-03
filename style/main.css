@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-section {
+    padding: 40px 0 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.row .col {
+    width: 50%;
+    max-width: 550px;
+}
+
+.row > .col > .box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 0 0 20px;
+    max-width: 450px;
+}
+
+.inner-tab {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: #000;
+    padding: 5px 0;
+}
+
+.range_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 15%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.tab-buttons {
+    padding: 6px 10px;
+    background: #000;
+    font-size: 13px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.inner-content {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+    overflow: hidden;
+    align-items: flex-start;
+    gap: 0 18px;
+    height: auto;
+}
+
+.inner-vote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 410px;
+}
+
+.inner-breeds {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    min-width: 410px;
+    border: 1px solid gainsboro;
+}
+
+
+.inner-imgsearch {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 410px;
+}
+
+.inner-fav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 410px;
+}
+
+.inner-upload {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 410px;
+}
+
+.vote-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.vote-box button i {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.likeButton {
+    padding: 5px 16px;
+    border: none;
+    background: #4caf50;
+    font-size: 15px;
+    color: #000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dislikeButton {
+    padding: 5px 16px;
+    border: none;
+    background: #f44336;
+    font-size: 15px;
+    color: #000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 0 0;
+    max-height: 350px;
+}
+
+.limit-box {
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    min-width: 350px;
+    min-height: 400px;
+}
+
+.limit-box:hover .favButton {
+    bottom: 90px;
+    transition: 0.3s;
+}
+
+.favButton:hover {
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.img-value {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+}
+
+
+.favButton {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    transition: 0.3s;
+    padding: 10px 0;
+    border-radius: 4px;
+    background: #4caf50;
+    cursor: pointer;
+    border: none;
+}
+
+.likes-img-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    overflow-y: auto;
+    max-height: 330px;
+}
+
+.selectFiltr {
+    font-size: 12px;
+    color: #1976d2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    max-width: 130px;
+    width: 125px;
+    height: 100px;
+}
+
+.likes-img {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.per-img-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-top: 1px solid gainsboro;
+    padding: 20px 0;
+}
+
+.delete-fav-img {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 40px;
+    transition: 0.5s;
+    z-index: 999;
+    border: none;
+    font-weight: 500;
+    border-radius: 3px;
+    background: #f44336;
+    cursor: pointer;
+}
+
+.card-img:hover .delete-fav-img {
+    top: 35px;
+    transition: 0.5s;
+}
+
+.hover-div {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    background: gainsboro;
+    opacity: 0.7;
+}
+
+.card-img:hover .hover-div {
+    max-height: 100%;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.special-descr {
+    text-align: center;
+    font-size: 16px;
+}
+
+.category-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-img-firstBox {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.category-img-secondBox {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.category-img {
+    position: relative;
+    overflow: hidden;
+    width: 360px;
+    height: 500px;
+    margin: 20px 0;
+}
+
+.slider-category-img {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.slider-card-img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-slider {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    gap: 30px;
+}
+
+.slider-points {
+    padding: 8px;
+    background: gainsboro;
+    color: gainsboro;
+    border-radius: 99em;
+    cursor: pointer;
+}
+
+.category-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 15px 0;
+}
+
+.category-cat-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.category-cat-id {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.category-cat-descr {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.category-cat-advent {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+.category-cat-birthPlace {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.category-cat-weight {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.category-cat-avglife {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.category-info span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.category-info-wrapper {
+    max-width: 345px;
+}
+
+.category-wiki {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 0 0;
+}
+
+.category-cat-wiki {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: orange;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.inner-filter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.inner-filter .col-6 {
+    width: 50%;
+    padding: 5px;
+}
+
+.inner-filter .col-6 .box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 0 0 10px 0;
+}
+
+.get-filter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: gray;
+}
+
+.inner-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 15px 0 0;
+}
+
+
+.inner-gallery .col-4 {
+    width: 33.333%;
+    padding: 2px;
+}
+
+.inner-gallery .col-4 .box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.gallery-card {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.gallery-card-button {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    width: 90%;
+    color: #f44336;
+    font-size: 20px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inner-gallery .col-4 .box:hover .gallery-card-button {
+    top: 80px;
+    transition: 0.3s;
+}
+
+.inner-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid gainsboro;
+    padding: 15px 10px;
+    margin: 20px 0 0;
+}
+
+.inner-page .col-6 {
+    width: 50%;
+}
+
+.inner-page .col-6 .box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.page-count {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: gray;
+    padding: 4px 0;
+}
+
+.getPage {
+    width: 70%;
+}
+
+.inner-page .col-6 .box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reset-button {
+    display: block;
+    border: none;
+    background: #1976d2;
+    border-radius: 3px;
+    font-size: 15px;
+    width: 140px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.hidden-button {
+    display: none;
+}

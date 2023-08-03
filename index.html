@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>The cat API</title>
+</head>
+<body>
+<header>
+    <section class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="box box-modify">
+                        <div class="inner-tab">
+                            <button class="tab-buttons">VOTE</button>
+                            <button class="tab-buttons">BREEDS</button>
+                            <button class="tab-buttons">IMAGES/SEARCH</button>
+                            <button class="tab-buttons">FAVOURITES</button>
+                            <button class="tab-buttons">UPLOAD</button>
+                            <span class="range_bar"></span>
+                        </div>
+                        <div class="inner-content">
+                            <div class="inner-vote">
+                                <div class="vote-box">
+                                    <button class="likeButton"><i class="fa-solid fa-thumbs-up"></i>LOVE IT</button>
+                                    <button class="dislikeButton"><i class="fa-solid fa-thumbs-down"></i>NOPE IT</button>
+                                </div>
+                                <div class="img-box">
+                                    <div class="limit-box">
+                                        <div class="limit-img"></div>
+                                        <button class="favButton">FAV IT</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-breeds">
+                                <div class="category-box">
+                                    <select name="" class="getCatsNames" onchange="catsBreeds(this)">
+
+                                    </select>
+                                </div>
+                                <div class="category-info-wrapper">
+                                   <div class="category-img-firstBox">
+                                       <div class="category-img">
+                                           <div class="slider-category-img">
+
+                                           </div>
+                                           <div class="category-slider">
+                                               <span class="slider-points"></span>
+                                               <span class="slider-points"></span>
+                                               <span class="slider-points"></span>
+                                               <span class="slider-points"></span>
+                                               <span class="slider-points"></span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                    <div class="category-img-secondBox">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-imgsearch">
+                              <div class="inner-filter">
+                                  <div class="col-6">
+                                      <div class="box">
+                                          <p class="get-filter">Order</p>
+                                          <select class="getOrder" onchange="makeOrder(this)">
+                                              <option value="RAND">Random</option>
+                                              <option value="Desc">Desc</option>
+                                              <option value="Asc">Asc</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-6">
+                                      <div class="box">
+                                          <p class="get-filter">Type</p>
+                                          <select class="getType">
+                                              <option value="All">All</option>
+                                              <option value="Static">Static</option>
+                                              <option value="Animated">Animated</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-6">
+                                      <div class="box">
+                                          <p class="get-filter">Category</p>
+                                          <select class="getOrder">
+                                              <option value="None">None</option>
+                                              <option value="boxes">boxes</option>
+                                              <option value="clothes">clothes</option>
+                                              <option value="hats">hats</option>
+                                              <option value="sinks">sinks</option>
+                                              <option value="space">space</option>
+                                              <option value="sunglasses">sunglasses</option>
+                                              <option value="ties">ties</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-6">
+                                      <div class="box">
+                                          <p class="get-filter">Breeed</p>
+                                          <select name="" class="getBreed" onchange="makeBreed(this)">
+
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                                <div class="inner-gallery">
+                                </div>
+                                <div class="inner-page">
+                                    <div class="col-6">
+                                        <div class=box">
+                                            <p class="page-count">Per Page</p>
+                                            <select class="getPage" onchange="makeCount(this)">
+                                                <option value="none" selected>None</option>
+                                                <option value="9">9</option>
+                                                <option value="18">18</option>
+                                                <option value="80">80</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="box more-wrapper">
+                                            <button class="reset-button"><i class="fa-solid fa-rotate-right"></i> MORE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-fav">
+                                <div class="likes-img-box">
+                                    <p class="special-descr">No Favourites yet, just click on one of the images in Vote or Search to 'Fav-it'</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+
+
+<script src="./js/main.js"></script>
+</body>
+</html>
