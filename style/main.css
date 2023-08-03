@@ -22,6 +22,7 @@
 .row .col {
     width: 50%;
     max-width: 550px;
+    min-width: 550px
 }
 
 .row > .col > .box {
