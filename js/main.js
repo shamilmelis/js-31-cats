@@ -1,3 +1,4 @@
+// ================================= Все Элементы ================================
 const picture = document.querySelector('.limit-img')
 const dislike = document.querySelector('.dislikeButton')
 const like = document.querySelector('.likeButton')
@@ -11,6 +12,7 @@ const getBreed = document.querySelector('.getBreed')
 const resetButton = document.querySelector('.reset-button')
 const sliderPoints = document.getElementsByClassName('slider-points')
 
+// ================================= Вкладки-Табы ================================
 const tabs = document.getElementsByClassName('tab-buttons')
 let slideZone = 430;
 slider.style.transform = `translate(0px)`
@@ -57,6 +59,8 @@ const catsObj = {}
 
 const catsArr = []
 
+// ================================= Картинка Лайк/Дизлайк ===============================
+
 const catsAPI = () => {
     fetch('https://api.thecatapi.com/v1/images/search?api_key=live_TlHTsqA8h8aQGMU99mThMhaeaxF26CbUYgZkkRK8FNpgHtFp55SWy3HgbsfqXT30')
         .then(res => res.json())
@@ -68,6 +72,8 @@ const catsAPI = () => {
 }
 
 catsAPI()
+
+// ================================= Select Option всех Breeds ===============================
 
 const breedsAPI = () => {
     fetch('https://api.thecatapi.com/v1/breeds')
@@ -85,6 +91,8 @@ const breedsAPI = () => {
 breedsAPI()
 
 const catInfo = {}
+
+// ================================= Вкладка "Breeds" ===============================
 
 const getBreeds = () => {
     fetch(`https://api.thecatapi.com/v1/breeds/search?name=${breedsValue}&api_key=live_TlHTsqA8h8aQGMU99mThMhaeaxF26CbUYgZkkRK8FNpgHtFp55SWy3HgbsfqXT30`)
@@ -119,6 +127,8 @@ const getBreeds = () => {
             })
         })
 }
+
+// ================================= Слайдер Изображений в "Breeds" ===============================
 
 const sliderImages = () => {
     fetch(`https://api.thecatapi.com/v1/images/search?name=${breedsValue}&limit=5&breed_ids=${breedsValue}&api_key=live_TlHTsqA8h8aQGMU99mThMhaeaxF26CbUYgZkkRK8FNpgHtFp55SWy3HgbsfqXT30`)
@@ -156,6 +166,8 @@ const sliderImages = () => {
 
 let breedsValue;
 
+// ================================= Запуск функции, новый api запрос ===============================
+
 const catsBreeds = (option) => {
     breedsValue = option.value
     getCatsInfo.innerHTML = ''
@@ -164,6 +176,7 @@ const catsBreeds = (option) => {
     sliderImages()
 }
 
+// ================================= Вкладка "Favourites" ===============================
 
 const favButton = document.querySelector('.favButton')
 favButton.addEventListener('click', () => {
@@ -193,6 +206,8 @@ dislike.addEventListener('click', () => {
 like.addEventListener('click', () => {
     catsAPI()
 })
+
+// ================================= Вкладка "Images/Search" ===============================
 
 const getGallery = () => {
     fetch(`https://api.thecatapi.com/v1/images/search?limit=${pageCount}&breed_ids=${filterBreed}&order=${filterOrder}&api_key=live_TlHTsqA8h8aQGMU99mThMhaeaxF26CbUYgZkkRK8FNpgHtFp55SWy3HgbsfqXT30`)
@@ -229,6 +244,8 @@ const getGallery = () => {
         })
 }
 
+// ================================= Функция Random в "Images/Search" ===============================
+
 const randomPicture = () => {
     fetch(' https://api.thecatapi.com/v1/images/search?limit=10')
         .then(res => res.json())
@@ -248,10 +265,14 @@ let pageCount
 let filterBreed;
 let filterOrder;
 
+// ================================= Кнопка Random в "Search/Images" ===============================
+
 resetButton.addEventListener('click', () => {
     innerGallery.innerHTML = ``
     randomPicture()
 })
+
+// ================================= Вывод Кол-во Изображ. в "Search/Images" ===============================
 
 const makeCount = (selected) => {
     pageCount = selected.value;
@@ -260,11 +281,15 @@ const makeCount = (selected) => {
     resetButton.classList.add('hidden-button')
 }
 
+// ================================= Вывод Breed в "Images/Search" ===============================
+
 const makeBreed = (breed) => {
     filterBreed = breed.value;
     innerGallery.innerHTML = ''
     getGallery()
 }
+
+// ================================= Вывод Order в "Images/Search" ===============================
 
 const makeOrder = (order) => {
     filterOrder = order.value
